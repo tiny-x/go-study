@@ -1,4 +1,4 @@
-module github.com/tiny/go-study
+module github.com/tiny-x/go-study
 
 go 1.14
 
