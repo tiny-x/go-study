@@ -1,4 +1,4 @@
-module github.com/tiny/cobra-test
+module github.com/tiny/go-study
 
 go 1.14
 
