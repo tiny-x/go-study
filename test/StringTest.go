@@ -2,11 +2,16 @@ package main
 
 import (
 	"fmt"
+
 	"regexp"
-	"strings"
+
+	"os"
+	"strconv"
+
 )
 
 func main()  {
+
 
 	//目标字符串
 	searchIn := `
@@ -33,5 +38,12 @@ func main()  {
 	}
 
 	fmt.Println(searchIn)
+
+	fileInfo, _ := os.Stat("/temp/1.log")
+	formatInt := strconv.FormatInt(int64(fileInfo.Mode().Perm()), 8)
+	fmt.Print(formatInt)
+	fmt.Print(formatInt)
+	fmt.Print(formatInt)
+
 
 }
