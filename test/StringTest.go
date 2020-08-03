@@ -36,5 +36,8 @@ func main()  {
 	fmt.Println(searchIn)
 	fmt.Println(searchIn)
 	fmt.Println(searchIn)
+	fmt.Println(searchIn)
+	fmt.Println(searchIn)
+	fmt.Println(searchIn)
 
 }
