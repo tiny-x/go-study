@@ -28,8 +28,6 @@ func main()  {
 			searchIn = strings.Replace(searchIn, text[0], text[0][1 : len(text[0]) - 1], 1)
 			continue
 		}
-
-
 	}
 
 	fmt.Println(searchIn)
