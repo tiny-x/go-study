@@ -1,20 +1,16 @@
 package main
 
+// Importing automaxprocs automatically adjusts GOMAXPROCS.
 import (
 	"fmt"
-	"github.com/containerd/cgroups"
+	_ "go.uber.org/automaxprocs/maxprocs"
+	"runtime"
 )
 
+// To render a whole-file example, we need a package-level declaration.
+var _ = ""
+
 func main() {
-	// Your application logic here.
-	cgroup, err := cgroups.Load(cgroups.V1, cgroups.StaticPath("/"))
-	if err != nil {
-		fmt.Println(fmt.Errorf("load cgroup error, %v", err))
-	}
-	stats, err := cgroup.Stat(cgroups.IgnoreNotExist)
-	if err != nil {
-		fmt.Println(fmt.Errorf("load cgroup stat error, %v", err))
-	}
-	cpu := stats.CPU
-	fmt.Println(fmt.Printf("size: %d", cpu.XXX_Size()))
+	size := runtime.GOMAXPROCS(0)
+	fmt.Print(size)
 }
