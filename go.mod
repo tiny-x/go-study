@@ -25,10 +25,3 @@ require (
 	k8s.io/client-go v12.0.0+incompatible
 	sigs.k8s.io/controller-runtime v0.5.3
 )
-
-replace (
-	github.com/chaosblade-io/chaosblade-exec-docker => /Users/Shared/ChaosBladeProjects/chaosblade-opensource/chaosblade-exec-docker
-	github.com/chaosblade-io/chaosblade-exec-os v0.7.0 => /Users/Shared/ChaosBladeProjects/chaosblade-opensource/chaosblade-exec-os
-	github.com/chaosblade-io/chaosblade-operator v0.7.0 => /Users/Shared/ChaosBladeProjects/chaosblade-opensource/chaosblade-operator
-	k8s.io/client-go => k8s.io/client-go v0.17.4 // Required by prometheus-operator
-)
