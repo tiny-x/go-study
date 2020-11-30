@@ -11,6 +11,8 @@ import (
 var _ = ""
 
 func main() {
-	size := runtime.GOMAXPROCS(0)
-	fmt.Print(size)
+	cpuCount := runtime.NumCPU()
+	gomaxprocs := runtime.GOMAXPROCS(cpuCount)
+	fmt.Println(cpuCount)
+	fmt.Println(gomaxprocs)
 }

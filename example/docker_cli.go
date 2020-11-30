@@ -10,6 +10,7 @@ import (
 )
 
 func main() {
+
 	cli, _ := client.NewClientWithOpts(client.FromEnv, client.WithVersion("1.24"))
 	ctx := context.Background()
 	id, _ := cli.ContainerExecCreate(ctx, "86f4dfea83583f4d900b74817aeba34996ea882b36a8cc8b1de0a4264ab6ac2e", types.ExecConfig{

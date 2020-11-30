@@ -1,4 +1,4 @@
-package main
+package chaosblade
 
 import (
 	"context"
@@ -6,18 +6,21 @@ import (
 	"github.com/chaosblade-io/chaosblade-exec-os/exec"
 	"github.com/chaosblade-io/chaosblade-exec-os/version"
 	"github.com/chaosblade-io/chaosblade-spec-go/spec"
+	"github.com/satori/go.uuid"
 	"github.com/sirupsen/logrus"
+	"testing"
 )
 
-func main() {
+func Test_exec_ssh(t *testing.T) {
 	executor := exec.NewSSHExecutor()
 	level, _ := logrus.ParseLevel("debug")
 	version.BladeVersion = "0.7.0"
 	logrus.SetLevel(level)
 	// value := context.WithValue(context.Background(), "suid", "abcde")
 	value := context.Background()
+	uid, _ := uuid.NewV4()
 	response := executor.Exec(
-		"abcded",
+		uid.String(),
 		value,
 		&spec.ExpModel{
 			Target:     "cpu",

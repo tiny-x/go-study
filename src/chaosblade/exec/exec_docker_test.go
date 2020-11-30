@@ -1,13 +1,14 @@
-package main
+package chaosblade
 
 import (
 	"context"
 	"fmt"
 	"github.com/chaosblade-io/chaosblade-exec-docker/exec"
 	"github.com/chaosblade-io/chaosblade-spec-go/spec"
+	"testing"
 )
 
-func main() {
+func Test_main(t *testing.T) {
 	executor := exec.NewNetWorkSidecarExecutor()
 	c := context.WithValue(context.Background(), "suid", "abc")
 	response := executor.Exec("", c, &spec.ExpModel{
