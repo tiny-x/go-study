@@ -2,12 +2,14 @@ package main
 
 import (
 	"fmt"
+	"github.com/sirupsen/logrus"
 	"regexp"
 	"strings"
-	"testing"
 )
 
-func Test_reg(t *testing.T) {
+func main() {
+	logrus.Info("identifiers id ", "aa", "")
+
 	//目标字符串
 	searchIn := `
 ./blade create file append --filepath ~/chaosblade/mock.log 
@@ -28,16 +30,8 @@ func Test_reg(t *testing.T) {
 			searchIn = strings.Replace(searchIn, text[0], text[0][1:len(text[0])-1], 1)
 			continue
 		}
-
 	}
 
 	fmt.Println(searchIn)
 
-	fmt.Println(searchIn)
-	fmt.Println(searchIn)
-	fmt.Println(searchIn)
-	fmt.Println(searchIn)
-	fmt.Println(searchIn)
-	fmt.Println(searchIn)
-	fmt.Println(searchIn)
 }
