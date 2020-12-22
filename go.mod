@@ -3,6 +3,7 @@ module github.com/tiny-x/go-study
 go 1.14
 
 require (
+	github.com/spf13/cobra v1.0.0
 	github.com/chaosblade-io/chaosblade-exec-docker v0.9.0
 	github.com/chaosblade-io/chaosblade-exec-os v0.9.0
 	github.com/chaosblade-io/chaosblade-operator v0.7.0
