@@ -20,7 +20,6 @@ func main() {
 
 	//expStatuses := result.Status.ExpStatuses
 	//execCommand(expStatuses, c)
-
 	list, err := c.CoreV1().Pods("default").List(metav1.ListOptions{})
 	if err != nil {
 		log.Println(err.Error())

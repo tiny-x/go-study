@@ -3,6 +3,8 @@ package main
 import (
 	"fmt"
 	"github.com/shirou/gopsutil/cpu"
+	"github.com/shirou/gopsutil/process"
+	"os"
 	"time"
 )
 
@@ -12,6 +14,8 @@ func main() {
 		fmt.Print(err.Error())
 	}
 
-	format := totalCpuPercent[0]
-	fmt.Print(format)
+	curProcess, err := process.NewProcess(int32(os.Getpid()))
+
+	fmt.Println(totalCpuPercent[0])
+	fmt.Print(curProcess.CPUPercent())
 }

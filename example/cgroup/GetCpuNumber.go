@@ -7,9 +7,6 @@ import (
 	"runtime"
 )
 
-// To render a whole-file example, we need a package-level declaration.
-var _ = ""
-
 func main() {
 	cpuCount := runtime.NumCPU()
 	gomaxprocs := runtime.GOMAXPROCS(cpuCount)
