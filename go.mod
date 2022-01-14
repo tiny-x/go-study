@@ -8,12 +8,20 @@ require (
 	github.com/chaosblade-io/chaosblade-exec-os v0.9.0
 	github.com/chaosblade-io/chaosblade-operator v0.7.0
 	github.com/chaosblade-io/chaosblade-spec-go v0.9.0
-	github.com/docker/docker v1.4.2-0.20200203170920-46ec8731fbce
+	github.com/containerd/cgroups v0.0.0-20191011165608-5fbad35c2a7e
+	github.com/docker/docker v20.10.12+incompatible
+    github.com/docker/go-connections v0.4.0 // indirect
+	github.com/google/gopacket v1.1.19
 	github.com/gorilla/mux v1.8.0 // indirect
+	github.com/jasonlvhit/gocron v0.0.1
+	github.com/prometheus/client_golang v1.5.1
+	github.com/prometheus/common v0.9.1
+	github.com/safchain/ethtool v0.0.0-20210803160452-9aa261dae9b1
 	github.com/satori/go.uuid v1.2.1-0.20181028125025-b2ce2384e17b
-	github.com/shirou/gopsutil v2.20.5+incompatible
+	github.com/shirou/gopsutil v3.21.8-0.20210816101416-f86a04298073+incompatible
 	github.com/sirupsen/logrus v1.5.0
 	github.com/spf13/cobra v1.0.0
+	github.com/tklauser/go-sysconf v0.3.9 // indirect
 	github.com/urfave/cli/v2 v2.3.0
 	go.uber.org/automaxprocs v1.3.0
 	golang.org/x/crypto v0.0.0-20200220183623-bac4c82f6975

@@ -1,4 +1,4 @@
-package main
+package docker
 
 import (
 	"context"
@@ -10,11 +10,11 @@ import (
 )
 
 func main() {
-	opts, err := client.NewClientWithOpts(client.FromEnv, client.WithVersion("1.24"))
+	opts, err := client.NewClientWithOpts(client.FromEnv, client.WithAPIVersionNegotiation())
 	if err != nil {
 		fmt.Print(err.Error())
 	}
-	stats, err := opts.ContainerStats(context.Background(), "5b508ee3a0d1", true)
+	stats, err := opts.ContainerStats(context.Background(), "094e2320e1a4", true)
 
 	defer stats.Body.Close()
 

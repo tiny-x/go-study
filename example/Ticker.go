@@ -1,7 +1,6 @@
 package main
 
 import (
-	"context"
 	"fmt"
 	"os"
 	"os/signal"
@@ -12,7 +11,7 @@ import (
 func main() {
 
 	go func() {
-		duration, err := time.ParseDuration("24h")
+		duration, err := time.ParseDuration("1s")
 		if err != nil {
 			fmt.Println(err.Error())
 		}
@@ -38,21 +37,4 @@ func main() {
 		}
 	}
 	fmt.Println("end Ticker")
-}
-
-func funcName() {
-	ctx, cancel := context.WithTimeout(context.Background(), time.Second*10)
-	defer cancel()
-
-	ticker := time.NewTicker(time.Second)
-TickerLoop:
-	for range ticker.C {
-		select {
-		case <-ctx.Done():
-			ticker.Stop()
-			break TickerLoop
-		default:
-			fmt.Println("abc")
-		}
-	}
 }

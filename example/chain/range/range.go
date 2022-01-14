@@ -23,7 +23,7 @@ func main() {
 	var message = make(chan string, 3)
 	go go1(message)
 	go go2(message)
-	//time.Sleep(3*time.Second)
+	time.Sleep(3 * time.Second)
 	//range读取
 	for val := range message {
 		fmt.Println(val)
