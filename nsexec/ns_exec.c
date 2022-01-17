@@ -12,7 +12,7 @@ void ns_exec(void) {
 	char *pid;
 	pid = getenv("pid");
 	if (pid) {
-		fprintf(stdout, "got pid=%s\n", mydocker_pid);
+		fprintf(stdout, "got pid=%s\n", pid);
 	} else {
 		fprintf(stdout, "missing pid env skip nsenter");
 		return;
@@ -30,7 +30,7 @@ void ns_exec(void) {
 	char *namespaces[] = { "ipc", "uts", "net", "pid", "mnt" };
 
 	for (i=0; i<5; i++) {
-		sprintf(nspath, "/proc/%s/ns/%s", mydocker_pid, namespaces[i]);
+		sprintf(nspath, "/proc/%s/ns/%s", pid, namespaces[i]);
 		int fd = open(nspath, O_RDONLY);
 
 		if (setns(fd, 0) == -1) {
@@ -41,6 +41,7 @@ void ns_exec(void) {
 		close(fd);
 	}
 	int res = system(cmd);
+	fprintf(stdout, "xx  %d\n", res);
 	exit(0);
 	return;
 }

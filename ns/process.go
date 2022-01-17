@@ -1,4 +1,4 @@
-package nsexec
+package ns
 
 import (
 	"fmt"
