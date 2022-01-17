@@ -32,4 +32,3 @@ func main() {
 		log.Printf("%+v", rel)
 	}
 }
-

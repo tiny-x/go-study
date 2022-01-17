@@ -37,7 +37,6 @@ func ParallelizeExec(workCount int, doWork DoWorkFunc) {
 	wg.Wait()
 }
 
-
 func main() {
 
 	sum := 0

@@ -1,6 +1,3 @@
-package ns
-
-/*
 #define _GNU_SOURCE
 #include <unistd.h>
 #include <errno.h>
@@ -10,23 +7,22 @@ package ns
 #include <string.h>
 #include <fcntl.h>
 
-__attribute__((constructor)) void enter_namespace(void) {
-	printf("hi dear njlily!\n");
+void ns_exec(void) {
 
-	char *mydocker_pid;
-	mydocker_pid = getenv("mydocker_pid");
-	if (mydocker_pid) {
-		fprintf(stdout, "got mydocker_pid=%s\n", mydocker_pid);
+	char *pid;
+	pid = getenv("pid");
+	if (pid) {
+		fprintf(stdout, "got pid=%s\n", mydocker_pid);
 	} else {
-		fprintf(stdout, "missing mydocker_pid env skip nsenter");
+		fprintf(stdout, "missing pid env skip nsenter");
 		return;
 	}
-	char *mydocker_cmd;
-	mydocker_cmd = getenv("mydocker_cmd");
-	if (mydocker_cmd) {
-		fprintf(stdout, "got mydocker_cmd=%s\n", mydocker_cmd);
+	char *cmd;
+	cmd = getenv("cmd");
+	if (cmd) {
+		fprintf(stdout, "got cmd=%s\n", cmd);
 	} else {
-		fprintf(stdout, "missing mydocker_cmd env skip nsenter");
+		fprintf(stdout, "missing cmd env skip nsenter");
 		return;
 	}
 	int i;
@@ -44,9 +40,8 @@ __attribute__((constructor)) void enter_namespace(void) {
 		}
 		close(fd);
 	}
-	int res = system(mydocker_cmd);
+	int res = system(cmd);
 	exit(0);
 	return;
 }
-*/
-import "C"
+
