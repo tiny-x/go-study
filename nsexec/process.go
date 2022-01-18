@@ -1,7 +1,8 @@
-package ns
+package nsexec
 
 import (
 	"fmt"
+	_ "github.com/tiny-x/go-study/nsexec/nsenter"
 	"io"
 	"io/ioutil"
 	"os"
@@ -42,8 +43,8 @@ func (p *Process) Exec(target string, cmd string) error {
 
 		command.Stdin = p.Stdin
 
-		command.Stdout = os.Stdout
-		command.Stderr = os.Stderr
+		command.Stdout = p.Stdout
+		command.Stderr = p.Stderr
 
 		if err := command.Run(); err != nil {
 			return err

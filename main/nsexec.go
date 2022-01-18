@@ -2,14 +2,13 @@ package main
 
 import (
 	"github.com/sirupsen/logrus"
-	"github.com/tiny-x/go-study/ns"
-	_ "github.com/tiny-x/go-study/nsexec"
+	"github.com/tiny-x/go-study/nsexec"
 	"os"
 )
 
 func main() {
 
-	process := &ns.Process{Cmd: "ls",
+	process := &nsexec.Process{Cmd: "ls",
 		Args:   nil,
 		Stdin:  os.Stdin,
 		Stdout: os.Stdout,
