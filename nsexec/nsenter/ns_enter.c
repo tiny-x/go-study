@@ -8,6 +8,7 @@
 #include <fcntl.h>
 
 void ns_exec(void) {
+    fprintf(stdout, "ns_exec............");
 
 	char *pid;
 	pid = getenv("pid");

@@ -8,7 +8,7 @@ require (
 	github.com/chaosblade-io/chaosblade-exec-os v0.9.0
 	github.com/chaosblade-io/chaosblade-operator v0.7.0
 	github.com/chaosblade-io/chaosblade-spec-go v0.9.0
-	github.com/containerd/cgroups v0.0.0-20191011165608-5fbad35c2a7e
+	github.com/containerd/cgroups v1.0.2-0.20210606023417-ca6254ff374c
 	github.com/docker/docker v20.10.12+incompatible
 	github.com/google/gopacket v1.1.19
 	github.com/gorilla/mux v1.8.0 // indirect
@@ -19,7 +19,7 @@ require (
 	github.com/safchain/ethtool v0.0.0-20210803160452-9aa261dae9b1
 	github.com/satori/go.uuid v1.2.1-0.20181028125025-b2ce2384e17b
 	github.com/shirou/gopsutil v3.21.8-0.20210816101416-f86a04298073+incompatible
-	github.com/sirupsen/logrus v1.5.0
+	github.com/sirupsen/logrus v1.7.0
 	github.com/spf13/cobra v1.0.0
 	github.com/tklauser/go-sysconf v0.3.9 // indirect
 	go.uber.org/automaxprocs v1.3.0
