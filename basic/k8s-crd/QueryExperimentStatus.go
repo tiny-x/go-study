@@ -76,8 +76,9 @@ func execCommand(expStatuses []v1alpha1.ExperimentStatus, c channel.Client) {
 						//return spec.Decode(content, spec.ReturnFail(spec.Code[spec.K8sInvokeError], content))
 					},
 					OutDecoder: func(bytes []byte) interface{} {
-						content := string(bytes)
-						return spec.Decode(content, spec.ReturnFail(spec.Code[spec.K8sInvokeError], content))
+						//content := string(bytes)
+						//return spec.Decode(content, spec.ReturnFail(spec.Code[spec.K8sInvokeError], content))
+						return nil
 					},
 				},
 				PodName:       containerObjectMeta.PodName,
