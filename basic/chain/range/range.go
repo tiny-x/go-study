@@ -21,6 +21,13 @@ func go2(message chan string) {
 }
 func main() {
 	var message = make(chan string, 3)
+	//range读取
+	i := len(message)
+	fmt.Println(i)
+	for val := range message {
+		fmt.Println(val)
+	}
+
 	go go1(message)
 	go go2(message)
 	time.Sleep(3 * time.Second)

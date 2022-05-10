@@ -15,7 +15,7 @@ import (
 )
 
 func main() {
-	k8sClient, err := newClient2("/Users/yefei/.kube/config")
+	k8sClient, err := newClient2("")
 	if err != nil {
 		fmt.Print(err.Error())
 	}

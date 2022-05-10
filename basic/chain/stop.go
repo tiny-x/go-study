@@ -17,12 +17,25 @@ func main() {
 	}()
 
 	go func() {
+		<-quit
+		fmt.Println("aaaaa")
+	}()
+
+	go func() {
 		quit := <-quit
 		if quit {
 			httpServer.Close()
+			fmt.Println("http server stop")
 		}
 	}()
 
-	time.Sleep(time.Second * 10)
+	go func() {
+		<-quit
+		fmt.Println("bbbbb")
+	}()
+
+	time.Sleep(time.Second * 5)
 	quit <- true
+
+	time.Sleep(time.Second * 10)
 }

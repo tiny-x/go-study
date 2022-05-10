@@ -1,6 +1,7 @@
 package main
 
 import (
+	"context"
 	"fmt"
 	"github.com/chaosblade-io/chaosblade-operator/channel"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
@@ -17,10 +18,9 @@ func main() {
 		Client:    nil,
 		Config:    kubeconfig,
 	}
-
 	//expStatuses := result.Status.ExpStatuses
 	//execCommand(expStatuses, c)
-	list, err := c.CoreV1().Pods("default").List(metav1.ListOptions{})
+	list, err := c.CoreV1().Pods("default").List(context.Background(), metav1.ListOptions{})
 	if err != nil {
 		log.Println(err.Error())
 	} else {
