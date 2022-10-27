@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"net/http"
+	"reflect"
 	"runtime"
 	"strconv"
 	"time"
@@ -25,6 +26,14 @@ func main() {
 		}()
 	}
 
+	s := &student{}
+	value := reflect.ValueOf(s).Elem()
+
+	conn := value.FieldByName("age")
+	if conn.CanAddr() {
+
+	}
+
 	for i := 0; i < 10; i++ {
 		fmt.Println(<-strings)
 	}
@@ -32,4 +41,8 @@ func main() {
 
 	if err := httpServer.ListenAndServe(); err != nil {
 	}
+}
+
+type student struct {
+	age int
 }

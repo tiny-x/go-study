@@ -109,5 +109,9 @@ func main() {
 	http.HandleFunc("/metrics", func(w http.ResponseWriter, r *http.Request) {
 		h.ServeHTTP(w, r)
 	})
+
+	http.HandleFunc("/metrics/a/", func(w http.ResponseWriter, r *http.Request) {
+		w.Write([]byte("hello"))
+	})
 	log.Fatal(http.ListenAndServe(":8999", nil))
 }

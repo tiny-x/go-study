@@ -1,4 +1,4 @@
-package main
+package cmd
 
 import (
 	"fmt"
@@ -9,7 +9,7 @@ import (
 	"syscall"
 )
 
-func main() {
+func test_x() {
 	name, i := GetRunFuncName()
 	logrus.WithFields(logrus.Fields{"uid": "abc", "file": name, "line": i}).Infoln("aa", name)
 

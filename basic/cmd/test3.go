@@ -6,12 +6,12 @@ import (
 	"os/exec"
 )
 
-func test_xx() {
+func test_xxxx() {
 
-	command := `[ -e /home/chaos_filldisk.log.dat ] && echo true || echo false`
-	command = `ls /opt`
-	//command = strings.Replace(command, " ", `\ `, -1)
-	cmd := exec.Command("/bin/sh", "-c", command)
+	//command := `java -jar a.jar`
+	//cmd := exec.Command("/bin/sh", "-c", command)
+
+	cmd := exec.Command("C:/Java/xx xx/bin/java", "-jar", "a.jar")
 
 	cmd.Stdin = os.Stdin
 	cmd.Stdout = os.Stdout
