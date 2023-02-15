@@ -13,8 +13,8 @@ require (
 	github.com/jasonlvhit/gocron v0.0.1
 	github.com/ncw/directio v1.0.5
 	github.com/onsi/gomega v1.8.1 // indirect
-	github.com/prometheus/client_golang v1.7.1
-	github.com/prometheus/common v0.10.0
+	github.com/prometheus/client_golang v1.11.1
+	github.com/prometheus/common v0.26.0
 	github.com/safchain/ethtool v0.0.0-20190326074333-42ed695e3de8
 	github.com/shirou/gopsutil v3.21.6+incompatible
 	github.com/sirupsen/logrus v1.8.1
