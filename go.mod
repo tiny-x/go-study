@@ -21,7 +21,7 @@ require (
 	github.com/spf13/cobra v1.1.3
 	github.com/tklauser/go-sysconf v0.3.10 // indirect
 	go.uber.org/automaxprocs v1.3.0
-	golang.org/x/crypto v0.0.0-20210711020723-a769d52b0f97
+	golang.org/x/crypto v0.1.0
 	helm.sh/helm/v3 v3.6.2
 	k8s.io/client-go v12.0.0+incompatible // indirect
 	rsc.io/letsencrypt v0.0.3 // indirect
